@@ -132,6 +132,8 @@ namespace MimeKit.Text {
 
 				if (flowed.Length >= OptimalLineLength) {
 					flowed.Append (' ');
+					while (line[index] == ' ')
+						index++;
 					break;
 				}
 
